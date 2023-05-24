@@ -2,5 +2,11 @@
   "name": "Optimus",
   "surname": "Prime",
   "email": "optimus_prime@autobot.cybertron",
-  "age": 5000
+  "age": 5000,
+  "address": {
+    "street": "Unicrone street",
+    "houseNumber": "77",
+    "city": "Los Angeles",
+    "country": "The United States of America"
+  }
 }

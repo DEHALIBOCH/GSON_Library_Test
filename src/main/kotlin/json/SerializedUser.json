@@ -1,1 +1,12 @@
-{"name":"Bumblebee","surname":"Autobot","email":"bumblebee@autobot.cybertron","age":700}
+{
+  "address": {
+    "street": "Ingram Street",
+    "houseNumber": "20",
+    "city": "New York City",
+    "country": "The United States of America"
+  },
+  "name": "Peter",
+  "surname": "Parker",
+  "email": "not_spiderman@gmai.com",
+  "age": 17
+}

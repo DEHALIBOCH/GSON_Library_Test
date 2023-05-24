@@ -1,49 +1,50 @@
-import com.google.gson.Gson
+import classes.Address
+import classes.UserFromJsonFile
+import classes.UserToJsonFile
+import classes.UserWithAddress
 import java.io.File
-import java.io.FileInputStream
-import java.io.FileOutputStream
 
 class Main {
 }
 
 fun main() {
     /*
-        val bumblebee = User(
-            "Bumblebee",
-            "Autobot",
-            "bumblebee@autobot.cybertron",
-            700
-        )
-        serializeUser(bumblebee)
+    val bumblebee = User(
+        "Bumblebee",
+        "Autobot",
+        "bumblebee@autobot.cybertron",
+        700
+    )
+    serializeUser(bumblebee)
+    val user = deserializeUser(file)
+    println(user)
     */
 
+    /*
+    val address = Address(
+        "Ingram Street",
+        "20",
+        "New York City",
+        "The United States of America"
+    )
+    val peterParker = UserWithAddress(
+        "Peter",
+        "Parker",
+        "not_spiderman@gmai.com",
+        17,
+        address
+    )
 
+    val userToJsonFile = UserToJsonFile<UserWithAddress>()
+    userToJsonFile.serializeUser(peterParker)
+
+    val file = File("C:\\projects\\kotlin\\GsonTest\\src\\main\\kotlin\\json\\User.json")
+    val userFromJsonFile = UserFromJsonFile<UserWithAddress>()
+    val optimusPrime = userFromJsonFile.deserializeUser(file, UserWithAddress::class.java)
+    println(optimusPrime)
+    */
 }
 
-private fun serializeUser(user: User) {
-    val gson = Gson()
-    val userGson = gson.toJson(user)
-    val file = File("C:\\projects\\kotlin\\GsonTest\\src\\main\\kotlin\\json\\SerializedUser.json")
-    val fos = FileOutputStream(file)
-    fos.use {
-        val byteArray = userGson.toByteArray()
-        it.write(byteArray)
-    }
-}
 
-private fun deserializeUser(file: File): User {
-    val gson = Gson()
-    val fis = FileInputStream(file)
-    val jsonString = StringBuilder()
-    fis.use {
-        while (true) {
-            val i = fis.read()
-            if (i == -1) {
-                break
-            }
-            jsonString.append(i.toChar())
-        }
-    }
-    return gson.fromJson(jsonString.toString(), User::class.java)
-}
+
 
