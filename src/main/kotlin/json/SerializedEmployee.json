@@ -1,0 +1,25 @@
+{
+  "responsibilities": [
+    "Meeting with development managers to discuss the scope of software projects.\n",
+    "Analyzing existing programs for modification purposes.\n",
+    "Researching and designing new software systems, websites, programs, and applications.\n",
+    "Writing and implementing, clean, scalable code.\n",
+    "Troubleshooting and debugging code.\n",
+    "Verifying and deploying software systems.\n",
+    "Evaluating user feedback.\n",
+    "Recommending and executing program improvements.\n",
+    "Maintaining software code and security systems.\n",
+    "Creating technical documents and training staff."
+  ],
+  "jobPosition": "Leading researcher in Microsoft Research",
+  "address": {
+    "street": "College town",
+    "houseNumber": "1",
+    "city": "Oxford",
+    "country": "England"
+  },
+  "name": "Tony",
+  "surname": "Hoare",
+  "email": "tony_hoare@cambridge.com",
+  "age": 88
+}

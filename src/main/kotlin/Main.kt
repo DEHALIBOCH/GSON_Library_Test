@@ -1,14 +1,9 @@
-import classes.Address
-import classes.UserFromJsonFile
-import classes.UserToJsonFile
-import classes.UserWithAddress
+import classes.*
 import java.io.File
 
-class Main {
-}
+class Main {}
 
-fun main() {
-    /*
+fun main() {/*
     val bumblebee = User(
         "Bumblebee",
         "Autobot",
@@ -38,11 +33,44 @@ fun main() {
     val userToJsonFile = UserToJsonFile<UserWithAddress>()
     userToJsonFile.serializeUser(peterParker)
 
-    val file = File("C:\\projects\\kotlin\\GsonTest\\src\\main\\kotlin\\json\\User.json")
+
     val userFromJsonFile = UserFromJsonFile<UserWithAddress>()
     val optimusPrime = userFromJsonFile.deserializeUser(file, UserWithAddress::class.java)
     println(optimusPrime)
     */
+
+    /*
+    val responsibilities = listOf<String>(
+        "Meeting with development managers to discuss the scope of software projects.\n",
+        "Analyzing existing programs for modification purposes.\n",
+        "Researching and designing new software systems, websites, programs, and applications.\n",
+        "Writing and implementing, clean, scalable code.\n",
+        "Troubleshooting and debugging code.\n",
+        "Verifying and deploying software systems.\n",
+        "Evaluating user feedback.\n",
+        "Recommending and executing program improvements.\n",
+        "Maintaining software code and security systems.\n",
+        "Creating technical documents and training staff."
+    )
+    val tonyHoareAddress = Address(
+        "College town",
+        "1",
+        "Oxford",
+        "England"
+    )
+    val dev = Developer(
+        "Tony",
+        "Hoare",
+        "tony_hoare@cambridge.com",
+        88,
+        tonyHoareAddress,
+        "Leading researcher in Microsoft Research",
+        responsibilities
+    )
+    val userToJson = UserToJsonFile<Developer>()
+    val file = File("C:\\projects\\kotlin\\GsonTest\\src\\main\\kotlin\\json\\SerializedEmployee.json")
+    userToJson.serializeUser(dev, file)
+     */
 }
 
 

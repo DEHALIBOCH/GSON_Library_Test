@@ -24,10 +24,9 @@ class UserFromJsonFile<out T : User> {
 }
 
 class UserToJsonFile<in T : User> {
-    fun serializeUser(user: T) {
+    fun serializeUser(user: T, file: File) {
         val gson = Gson()
         val userGson = gson.toJson(user)
-        val file = File("C:\\projects\\kotlin\\GsonTest\\src\\main\\kotlin\\json\\SerializedUser.json")
         val fos = FileOutputStream(file)
         fos.use {
             val byteArray = userGson.toByteArray()
