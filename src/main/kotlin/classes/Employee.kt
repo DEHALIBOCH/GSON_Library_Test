@@ -5,8 +5,8 @@ open class Employee(
     surname: String,
     email: String,
     age: Int,
-    address: Address,
-    private val jobPosition: String
+    address: Address?,
+    private val jobPosition: String?
 ) : UserWithAddress(name, surname, email, age, address) {
 
     override fun toString(): String {

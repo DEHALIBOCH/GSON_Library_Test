@@ -1,48 +1,14 @@
 import classes.*
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import com.google.gson.GsonBuilder
 import java.io.File
 import java.io.FileReader
+import java.io.FileWriter
 import java.util.*
 
 class Main {}
 
-fun main() {/*
-    val bumblebee = User(
-        "Bumblebee",
-        "Autobot",
-        "bumblebee@autobot.cybertron",
-        700
-    )
-    serializeUser(bumblebee)
-    val user = deserializeUser(file)
-    println(user)
-    */
-
-    /*
-    val address = Address(
-        "Ingram Street",
-        "20",
-        "New York City",
-        "The United States of America"
-    )
-    val peterParker = UserWithAddress(
-        "Peter",
-        "Parker",
-        "not_spiderman@gmai.com",
-        17,
-        address
-    )
-
-    val userToJsonFile = UserToJsonFile<UserWithAddress>()
-    userToJsonFile.serializeUser(peterParker)
-
-
-    val userFromJsonFile = UserFromJsonFile<UserWithAddress>()
-    val optimusPrime = userFromJsonFile.deserializeUser(file, UserWithAddress::class.java)
-    println(optimusPrime)
-    */
-
+fun main() {
     /*
     val responsibilities = listOf<String>(
         "Meeting with development managers to discuss the scope of software projects.\n",
@@ -79,6 +45,42 @@ fun main() {/*
     val file = File("C:\\projects\\kotlin\\GsonTest\\src\\main\\kotlin\\json\\OsList.json")
     val arrOS = deserializeOsToArray(file)
     println(arrOS.contentToString())
+     */
+    /*
+//    val captainAmerica = Employee(
+//        "Steve",
+//        "Rogers",
+//        "steve_rogers@avengers.com",
+//        107,
+//        null,
+//        null
+//    )
+//    val file = File("C:\\projects\\kotlin\\GsonTest\\src\\main\\kotlin\\json\\CaptainAmerica.json")
+    val gson = Gson()
+//    val writer = FileWriter(file)
+//    val jsonString = gson.toJson(captainAmerica)
+//    writer.use {
+//        writer.write(jsonString)
+//    }
+
+    val file = File("C:\\projects\\kotlin\\GsonTest\\src\\main\\kotlin\\json\\Hulk.json")
+    val str = StringBuilder()
+    FileReader(file).use {
+        while (true) {
+            val i = it.read()
+            if (i == -1) {
+                break
+            }
+            str.append(i.toChar())
+        }
+    }
+    // Age isn`t defined in Hulk.json => hulk.age = 0
+    val hulk = gson.fromJson<Employee>(str.toString(), Employee::class.java)
+    println(hulk)
+
+    // By default, properties with null values not includes in json.
+    // If we need to include nulls in json file, we can use GsonBuilder().serializeNulls().
+    val gsonSerializedNulls = GsonBuilder().serializeNulls().create()
      */
 }
 

@@ -6,8 +6,8 @@ class Developer(
     email: String,
     age: Int,
     address: Address,
-    jobPosition: String,
-    private val responsibilities: List<String>
+    jobPosition: String?,
+    private val responsibilities: List<String>?
 ) : Employee(name, surname, email, age, address, jobPosition) {
 
     override fun toString(): String {
