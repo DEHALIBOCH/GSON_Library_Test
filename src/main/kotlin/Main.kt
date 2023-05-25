@@ -1,5 +1,9 @@
 import classes.*
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import java.io.File
+import java.io.FileReader
+import java.util.*
 
 class Main {}
 
@@ -71,8 +75,27 @@ fun main() {/*
     val file = File("C:\\projects\\kotlin\\GsonTest\\src\\main\\kotlin\\json\\SerializedEmployee.json")
     userToJson.serializeUser(dev, file)
      */
+    /*
+    val file = File("C:\\projects\\kotlin\\GsonTest\\src\\main\\kotlin\\json\\OsList.json")
+    val arrOS = deserializeOsToArray(file)
+    println(arrOS.contentToString())
+     */
 }
 
 
 
-
+private fun deserializeOsToArray(file: File): Array<OS> {
+    val gson = Gson()
+    val reader = FileReader(file)
+    val str = StringBuilder()
+    reader.use {
+        while (true) {
+            val i = it.read()
+            if (i == -1) {
+                break
+            }
+            str.append(i.toChar())
+        }
+    }
+    return gson.fromJson(str.toString(), Array<OS>::class.java)
+}
